@@ -8,14 +8,11 @@ but summing the last 3 (instead of 2) numbers of the sequence to generate the ne
     :param n: quantity of generated numbers in sequence
     :return: list with generated sequence
     """
-    result = []
-    if n < len(signature):
-        result = signature[:n]
-    else:
-        result = signature + [0] * (n-3)
-        for i in range(3, n):
-            result[i] = result[i - 1] + result[i - 2] + result[i - 3]
-    return result
+    result = signature.copy()
+    while len(result) < n:
+        result.append(sum(result[-3:]))
+
+    return result[:n]
 
 
 print(tribonacci([300, 200, 100], 0))
