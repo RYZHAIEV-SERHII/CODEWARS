@@ -7,11 +7,11 @@ def pig_it(text):
             result.remove(word)
         else:
             continue
-    return ' '.join(result)
+    return " ".join(result)
 
 
-print(pig_it('Pig latin is cool'))
-print(pig_it('Hello world !'))
+print(pig_it("Pig latin is cool"))
+print(pig_it("Hello world !"))
 
 
 # alternative version

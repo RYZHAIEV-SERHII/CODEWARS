@@ -10,5 +10,5 @@ def last_digit(a, b):
 
 
 print(last_digit(9, 7))
-print(last_digit(2 ** 200, 2 ** 300))
+print(last_digit(2**200, 2**300))
 print(last_digit(0, 0))

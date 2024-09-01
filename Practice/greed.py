@@ -1,5 +1,5 @@
 def score(dice: list[int]) -> int:
-    '''
+    """
     Greed is a dice game played with five six-sided dice. Your mission, should you choose to accept it,
     is to score a throw according to these rules. You will always be given an array with five six-sided dice values.
 
@@ -25,7 +25,7 @@ def score(dice: list[int]) -> int:
 
     :param dice: list of dice values
     :return: int
-    '''
+    """
 
     from collections import Counter
 
@@ -35,7 +35,7 @@ def score(dice: list[int]) -> int:
         3: {3: 300},
         4: {3: 400},
         5: {1: 50, 3: 500},
-        6: {3: 600}
+        6: {3: 600},
     }
 
     total_score = 0
@@ -44,12 +44,16 @@ def score(dice: list[int]) -> int:
     for value, quantity in count.items():
         if value == 1:
             if quantity >= 3:
-                total_score += dice_values[value][3] + (quantity - 3) * dice_values[value][1]
+                total_score += (
+                    dice_values[value][3] + (quantity - 3) * dice_values[value][1]
+                )
             else:
                 total_score += quantity * dice_values[value][1]
         elif value == 5:
             if quantity >= 3:
-                total_score += dice_values[value][3] + (quantity - 3) * dice_values[value][1]
+                total_score += (
+                    dice_values[value][3] + (quantity - 3) * dice_values[value][1]
+                )
             else:
                 total_score += quantity * dice_values[value][1]
         else:

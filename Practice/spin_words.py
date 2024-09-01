@@ -4,7 +4,7 @@ def spin_words(sentence):
         if len(word) > 4:
             new_sentence.insert(new_sentence.index(word), word[::-1])
             new_sentence.remove(word)
-    return ' '.join(new_sentence)
+    return " ".join(new_sentence)
 
 
 print(spin_words("Hey fellow warriors"))
