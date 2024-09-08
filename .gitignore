@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/linux,python,pycharm,venv,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,python,pycharm,venv,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/python,pycharm,visualstudiocode,linux,windows,venv
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,pycharm,visualstudiocode,linux,windows,venv
 
 ### Linux ###
 *~
@@ -295,6 +295,11 @@ cython_debug/
 # Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
 poetry.toml
 
+# ruff
+.ruff_cache/
+
+# LSP config files
+pyrightconfig.json
 
 ### venv ###
 # Virtualenv
@@ -327,7 +332,33 @@ pip-selfcheck.json
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,python,pycharm,venv,visualstudiocode
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-secrets.txt
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.toptal.com/developers/gitignore/api/python,pycharm,visualstudiocode,linux,windows,venv
+
 .idea/
+.gitignore
